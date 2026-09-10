@@ -1,3 +1,0 @@
-{
-  "goal": "Test SauceDemo (https://www.saucedemo.com): 1. Login with username 'standard_user' and password 'secret_sauce' 2. Verify 'Products' page loads with title 'Products' 3. Add 'Sauce Labs Backpack' and 'Sauce Labs Bike Light' to cart 4. Go to cart and verify both items are present 5. Click Checkout, fill in First Name 'John', Last Name 'Doe', Zip Code '12345' 6. Click Continue and verify the checkout overview page 7. Click Finish and verify 'Thank you for your order!' message is displayed 8. Click 'Back Home' to return to products page 9. Open hamburger menu and click Logout"
-}

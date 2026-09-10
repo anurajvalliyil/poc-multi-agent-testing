@@ -1,6 +1,0 @@
-{
-  "reportPath": "./reports/report.json",
-  "specPath": "./reports/playwright-scripts/TC-SUITE-1.spec.ts",
-  "pagesDir": "./reports/playwright-scripts/pages/",
-  "outputPath": "./reports/eval_results.json"
-}
