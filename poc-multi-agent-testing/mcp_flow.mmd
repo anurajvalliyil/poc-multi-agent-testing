@@ -1,0 +1,22 @@
+sequenceDiagram
+    participant CLI as npm start
+    participant Orch as orchestrate.ts
+    participant Master as OrchestratorAgent
+    participant Groq as Groq (LLM)
+    participant Worker as Skill Agent (Nav/Assert)
+    participant MCP as Playwright MCP Client
+    participant Browser as Chromium Browser
+
+    CLI->>Orch: tsx orchestrate.ts
+    Orch->>Master: Initialize & load DEMO_GOAL
+    Master->>Groq: Who should handle this task?
+    Groq-->>Master: Select Navigator Agent
+    Master->>Worker: Delegate task
+    Worker->>Groq: What MCP tool to call?
+    Groq-->>Worker: Tool: playwright_navigate
+    Worker->>MCP: Execute tool via stdio
+    MCP->>Browser: page.goto()
+    Browser-->>MCP: Page loaded
+    MCP-->>Worker: Tool result
+    Worker-->>Master: AgentResult (Success)
+    Master-->>Orch: Task completed

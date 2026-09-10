@@ -1,0 +1,26 @@
+graph TB
+    Entry["orchestrate.ts (Entry Point)"]
+    Orch["Orchestrator Agent (Master)"]
+    Nav["Navigator Agent"]
+    Assert["Assertion Agent"]
+    Data["Data Agent"]
+    Repair["Repair Agent"]
+    Reporter["Reporter Agent"]
+    MCP["Playwright MCP Client"]
+    Browser["Browser (Chromium)"]
+    
+    Entry --> Orch
+    Orch -->|Delegates Task| Nav
+    Orch -->|Delegates Task| Assert
+    Orch -->|Delegates Task| Data
+    Orch -->|Delegates Task| Reporter
+    Nav -->|Tools| MCP
+    Assert -->|Tools| MCP
+    Data -->|Tools| MCP
+    Orch -.->|On Failure| Repair
+    Repair -->|Fixes State| MCP
+    MCP --> Browser
+    
+    style Orch fill:#4a90d9,color:#fff
+    style MCP fill:#e74c3c,color:#fff
+    style Browser fill:#2ecc71,color:#fff

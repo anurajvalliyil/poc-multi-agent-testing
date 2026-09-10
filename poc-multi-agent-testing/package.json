@@ -1,0 +1,21 @@
+{
+  "name": "poc-multi-agent-testing",
+  "version": "1.0.0",
+  "description": "Multi-Agent Test Automation POC with Playwright MCP",
+  "type": "module",
+  "main": "dist/orchestrate.js",
+  "scripts": {
+    "start": "tsc && node dist/orchestrate.js"
+  },
+  "dependencies": {
+    "@mermaid-js/mermaid-cli": "^11.15.0",
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "@playwright/mcp": "latest",
+    "playwright": "latest"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5"
+  }
+}
