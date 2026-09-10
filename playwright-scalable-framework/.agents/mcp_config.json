@@ -1,8 +1,0 @@
-{
-  "mcpServers": {
-    "playwright": {
-      "command": "node",
-      "args": ["C:/Users/anuraj.v/.gemini/antigravity-ide/scratch/playwright-scalable-framework/mcp-server/dist/index.js"]
-    }
-  }
-}
